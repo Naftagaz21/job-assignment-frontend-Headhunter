@@ -26,7 +26,12 @@ export default function EmptyColorCollection(props: EmptyColorCollectionProps) {
             justifyContent: "center",
             alignItems: "center",
           }}>
-          <BGImg />
+          <BGImg
+            style={{
+              height: "50px",
+              width: "50px",
+            }}
+          />
         </div>
         <p
           style={{
