@@ -30,7 +30,7 @@ export default function ColorCollection(props: ColorCollectionProps) {
           {props.itemData !== null &&
             props.itemData.length > 0 &&
             props.itemData.map((item: Color) => (
-              <ColorEntry entry={item} onDelete={props.setData} />
+              <ColorEntry key={item.id} entry={item} onDelete={props.setData} />
             ))}
         </div>
       </div>

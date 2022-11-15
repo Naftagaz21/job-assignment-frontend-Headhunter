@@ -38,17 +38,23 @@ export default function NewColorField(props: NewColorFieldProps) {
       body: jsonData,
     });
 
-    if (response.ok) return;
+    if (response.ok) {
+      props.onAdd();
+      return;
+    }
 
     let res = await response.json();
 
     if (Object.keys(res).length === 0 && !response.ok) {
       alert("Error occured when adding color to database!");
+      return;
     } else if (Object.keys(res).length > 0) {
       if (res.message === "Duplicate color name") {
         alert("Duplicate color name!");
+        return;
       } else if (res.message === "Duplicate color code") {
         alert("Duplicate color code!");
+        return;
       }
     }
   };
@@ -64,7 +70,6 @@ export default function NewColorField(props: NewColorFieldProps) {
       });
       addColor(jsonData);
     }
-    props.onAdd();
   };
 
   const handleTitleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
