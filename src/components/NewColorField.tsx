@@ -62,6 +62,10 @@ export default function NewColorField(props: NewColorFieldProps) {
   const addColorClick = () => {
     if (title === "") {
       alert("Color name must be specified!");
+      return;
+    } else if (title.length > 25) {
+      alert("Color name is too long!");
+      return;
     }
     if (checkTitleAndColorCode(title, colorhex)) {
       const jsonData = JSON.stringify({

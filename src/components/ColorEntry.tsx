@@ -46,7 +46,7 @@ export default function ColorEntry(props: ColorEntryProps) {
           alignItems: "center",
           padding: "0px",
           gap: "10px",
-          width: "109px",
+          width: "250px",
           height: "36px",
           fontFamily: "Montserrat",
           fontSize: "18px",
@@ -56,8 +56,17 @@ export default function ColorEntry(props: ColorEntryProps) {
             width: "36px",
             height: "36px",
             background: props.entry.colorhex,
-          }}></div>
-        <p className="color-entry-name">{props.entry.title}</p>
+          }}
+        />
+        <p
+          className="color-entry-name"
+          style={{
+            height: "24px",
+            width: "200px",
+            overflow: "auto",
+          }}>
+          {props.entry.title}
+        </p>
       </div>
       <button
         onClick={removeColorClick}
@@ -66,10 +75,11 @@ export default function ColorEntry(props: ColorEntryProps) {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          padding: "12px 16px",
+          padding: "10px 14px",
           gap: "10px",
           border: "1px solid #EBECEC",
           background: "white",
+          fontSize: "15px",
         }}>
         Remove color
       </button>

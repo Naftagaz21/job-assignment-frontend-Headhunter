@@ -26,7 +26,12 @@ export default function ColorCollection(props: ColorCollectionProps) {
             Color collection
           </p>
         </div>
-        <div className="color-collection">
+        <div
+          className="color-collection"
+          style={{
+            maxHeight: "520px",
+            overflowY: "auto",
+          }}>
           {props.itemData !== null &&
             props.itemData.length > 0 &&
             props.itemData.map((item: Color) => (
