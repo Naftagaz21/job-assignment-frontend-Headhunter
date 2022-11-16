@@ -32,11 +32,14 @@ export default function NewColorField(props: NewColorFieldProps) {
   };
 
   const addColor = async (jsonData: BodyInit) => {
-    const response = await fetch("http://localhost:8080/insert", {
-      method: "POST",
-      mode: "cors",
-      body: jsonData,
-    });
+    const response = await fetch(
+      "https://gin-production-52a3.up.railway.app/insert",
+      {
+        method: "POST",
+        mode: "cors",
+        body: jsonData,
+      }
+    );
 
     if (response.ok) {
       props.onAdd();

@@ -14,7 +14,9 @@ export default function MyFavouriteColors() {
 
   const getData = async () => {
     try {
-      const response = await fetch(`http://localhost:8080/`);
+      const response = await fetch(
+        `https://gin-production-52a3.up.railway.app/`
+      );
       if (!response.ok) {
         throw new Error(`An HTTP error occured. Status: ${response.status}`);
       }

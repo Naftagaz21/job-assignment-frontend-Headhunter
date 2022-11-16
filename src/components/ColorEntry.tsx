@@ -8,11 +8,14 @@ interface ColorEntryProps {
 
 export default function ColorEntry(props: ColorEntryProps) {
   const removeColor = async (jsonData: BodyInit) => {
-    const response = await fetch("http://localhost:8080/delete", {
-      method: "POST",
-      mode: "cors",
-      body: jsonData,
-    });
+    const response = await fetch(
+      "https://gin-production-52a3.up.railway.app/delete",
+      {
+        method: "POST",
+        mode: "cors",
+        body: jsonData,
+      }
+    );
 
     if (response.ok) {
       props.onDelete();
