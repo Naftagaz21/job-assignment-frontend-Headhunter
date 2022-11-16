@@ -4,7 +4,7 @@ The front-end of the My Favorite Colors web App; made using React and Typescript
 The app is available [here](https://job-assignment-frontend-headhunter.vercel.app/).
 
 You can find both the endpoint source code deployed on *Railway* and the local one, [here](https://github.com/Naftagaz21/gin-test-railway) and [here](https://github.com/Naftagaz21/golang-pg),
-respectively. Just let me know when you're done looking at the Railway code, as I left out the DB parameters public. 
+respectively. 
 
 You can start the project using by running *npm install* followed by *npm start*.
 
